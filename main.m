@@ -78,3 +78,4 @@ end
 
 % close any opened figures:
 close all;
+beep;
