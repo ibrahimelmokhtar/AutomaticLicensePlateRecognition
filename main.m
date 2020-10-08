@@ -16,6 +16,12 @@ for index = 1:length(images)
     
     % read a specific image:
     img_original = imread(original_name);
+    
+    % check image dimentions to apply resize:
+    [width, height, dim] = size(img_original);
+    if (width > 500) || (height > 2000)
+        img_original = imresize(img_original, 1/3);
+    end
 
     % change original image into gray image:
     img_grayScale = rgb2gray(img_original);
